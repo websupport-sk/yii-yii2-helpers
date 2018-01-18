@@ -3,10 +3,11 @@
     "description": "Yii 2 helpers backported to use in Yii 1",
     "type": "library",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "yiisoft/yii": "^1.0"
     },
     "require-dev": {
-        "yiisoft/yii2": "^2.0"
+        "phpunit/phpunit": "~4.0"
     },
     "repositories": [
         {
@@ -16,7 +17,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "yii\\helpers\\": "helpers/"
+            "yii\\helpers\\": "helpers/",
+            "tests\\": "tests/"
         }
     }
 }
