@@ -33,7 +33,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "yii\\helpers\\": "helpers/",
+            "yii\\base\\": "bridge/base/",
+            "yii\\helpers\\": "helpers/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": ["vendor/yiisoft/yii/framework/base/"],
+        "psr-4": {
             "tests\\": "tests/"
         }
     }
