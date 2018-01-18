@@ -1,0 +1,22 @@
+{
+    "name": "websupport/yii-yii2-helpers",
+    "description": "Yii 2 helpers backported to use in Yii 1",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "yii\\helpers\\": "helpers/"
+        }
+    }
+}
