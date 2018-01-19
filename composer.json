@@ -38,5 +38,8 @@
         "psr-4": {
             "tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
