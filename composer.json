@@ -15,10 +15,6 @@
     },
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "yiisoft/yii2-framework",
