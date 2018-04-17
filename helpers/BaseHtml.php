@@ -108,7 +108,7 @@ class BaseHtml
      */
     public static function encode($content, $doubleEncode = true)
     {
-        return htmlspecialchars($content, ENT_QUOTES | ENT_SUBSTITUTE, Yii::$app ? Yii::$app->charset : 'UTF-8', $doubleEncode);
+        return htmlspecialchars($content, ENT_QUOTES | ENT_SUBSTITUTE, Yii::app() ? Yii::app()->charset : 'UTF-8', $doubleEncode);
     }
 
     /**
@@ -299,7 +299,7 @@ class BaseHtml
      */
     public static function csrfMetaTags()
     {
-        $request = Yii::$app->getRequest();
+        $request = Yii::app()->getRequest();
         if ($request instanceof Request && $request->enableCsrfValidation) {
             return static::tag('meta', '', array('name' => 'csrf-param', 'content' => $request->csrfParam)) . "\n    "
                 . static::tag('meta', '', array('name' => 'csrf-token', 'content' => $request->getCsrfToken())) . "\n";
@@ -333,7 +333,7 @@ class BaseHtml
 
         $hiddenInputs = array();
 
-        $request = Yii::$app->getRequest();
+        $request = Yii::app()->getRequest();
         if ($request instanceof Request) {
             if (strcasecmp($method, 'get') && strcasecmp($method, 'post')) {
                 // simulate PUT, DELETE, etc. via POST
